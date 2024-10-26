@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="project-detail">
+    <h2>{{ project.title }}</h2>
+    <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}" class="project-image">
+    <p>{{ project.description }}</p>
+    
+    <h3>Technologies Used:</h3>
+    <ul>
+        {% for tech in project.technologies %}
+        <li>{{ tech }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Project Links:</h3>
+    <p>
+        {% if project.github %}
+            <a href="{{ project.github }}" target="_blank">GitHub Repository</a>
+        {% endif %}
+        {% if project.demo %}
+            <a href="{{ project.demo }}" target="_blank">Live Demo</a>
+        {% endif %}
+    </p>
+</section>
+{% endblock %}

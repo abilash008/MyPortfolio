@@ -1,0 +1,19 @@
+body.dark-theme {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-theme header {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+body.dark-theme .project-card {
+    background: #34495e;
+    color: #ecf0f1;
+}
+
+body.dark-theme #contact input,
+body.dark-theme #contact textarea {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
