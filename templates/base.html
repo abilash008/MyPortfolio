@@ -6,6 +6,7 @@
     <title>Abilash's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     
 
 </head>
@@ -19,6 +20,7 @@
             <button id="theme-toggle">Toggle Theme</button>
         </nav>
     </header>
+    
     <div id="project-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -29,6 +31,8 @@
     
 
     {% block content %}{% endblock %}
+
+    
 
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>

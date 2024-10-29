@@ -1,0 +1,20 @@
+<!-- submissions.html -->
+<h2>Form Submissions</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Date</th>
+    </tr>
+    {% for submission in submissions %}
+    <tr>
+        <td>{{ submission[0] }}</td>
+        <td>{{ submission[1] }}</td>
+        <td>{{ submission[2] }}</td>
+        <td>{{ submission[3] }}</td>
+        <td>{{ submission[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
