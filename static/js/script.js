@@ -25,3 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+// Fade-in effect for skills section on scroll
+window.addEventListener('scroll', function () {
+    const skillsSection = document.getElementById('skills');
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.3;
+    if (sectionPos < screenPos) {
+        skillsSection.classList.add('fade-in');
+    }
+});
+
+

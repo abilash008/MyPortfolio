@@ -1,20 +1,120 @@
-<!-- submissions.html -->
-<h2>Form Submissions</h2>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Message</th>
-        <th>Date</th>
-    </tr>
-    {% for submission in submissions %}
-    <tr>
-        <td>{{ submission[0] }}</td>
-        <td>{{ submission[1] }}</td>
-        <td>{{ submission[2] }}</td>
-        <td>{{ submission[3] }}</td>
-        <td>{{ submission[4] }}</td>
-    </tr>
-    {% endfor %}
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submissions</title>
+    <style>
+        /* General styling for body */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centered title with gradient color */
+        h2 {
+            text-align: center;
+            color: #5a5a5a;
+            margin-top: 20px;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        /* Table styling */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Table header styling with gradient */
+        th {
+            background: linear-gradient(135deg, #7d7de8, #6c63ff);
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            text-align: left;
+            font-size: 1em;
+        }
+
+        /* Table row styling */
+        tr {
+            transition: background-color 0.3s ease;
+        }
+
+        /* Table data cell styling */
+        td {
+            padding: 12px;
+            font-size: 0.95em;
+            font-weight: bold;
+            color: #4b4b4b;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Alternating row color */
+        tr:nth-child(even) {
+            background-color: #f9f9fb;
+        }
+
+        /* Hover effect on rows */
+        tr:hover {
+            background-color: #eef2ff;
+            transform: scale(1.01);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        /* Optional button styling for navigation if needed */
+        .back-button {
+            display: block;
+            width: 120px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #7d7de8, #6c63ff);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(135deg, #6c63ff, #7d7de8);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Submissions</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Date</th>
+        </tr>
+        {% for submission in submissions %}
+        <tr>
+            <td>{{ submission[0] }}</td>
+            <td>{{ submission[1] }}</td>
+            <td>{{ submission[2] }}</td>
+            <td>{{ submission[3] }}</td>
+            <td>{{ submission[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Optional back button -->
+    <a href="{{ url_for('index') }}" class="back-button">Go Back</a>
+
+</body>
+</html>

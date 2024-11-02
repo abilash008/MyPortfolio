@@ -2,28 +2,61 @@
 
 {% block content %}
 <section id="about">
-    <h2>About Me</h2>
-    <p>Brief introduction...</p>
+    <h2><b><i>About Me</i></b></h2>
+    <p><b>Hello, I'm NAGA SATYA ABILASH BOLLU, an MCA student with a passion for bringing tech solutions to life.<br>
+        Skilled in Python, MySQL, Django, HTML, CSS, and JavaScript,<br>
+        I am specialized in building responsive web applications and effective data-driven solutions.<br>
+        I also explore AI prompting, using this emerging skill to enhance user interactions and improve project efficiency. <br>
+
+        I’m excited to contribute my technical expertise and collaborative energy to real-world projects as I step into the tech industry.<br>
+        My goal is to continuously grow, learn from industry professionals, and develop impactful solutions that make a difference.<b></p>
 </section>
+
+<section id="skills">
+    <h2>My Skillset</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <div class="icon">⚙️</div>
+            <h3>HTML</h3>
+            <p>Expert in creating structured content for the web using HTML5.</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">🎨</div>
+            <h3>CSS</h3>
+            <p>Skilled in styling and layout design using CSS and frameworks like Bootstrap.</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">💻</div>
+            <h3>JavaScript</h3>
+            <p>Proficient in building interactive and dynamic web applications with JavaScript.</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">&#128295;</div>
+            <h3>Python</h3>
+            <p>Skilled in backend development and data manipulation using Python.</p>
+        </div>
+    </div>
+</section>
+
 
 <section id="projects">
     <h2>My Projects</h2>
-    <div id="project-gallery">
-        <div class="project-card">
-            <h3>Project 1</h3>
-        </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-        </div>
+    <div class="project-card">
+        <h3>Project 1</h3>
+        <p>A description of one of my standout projects, showcasing my skills.</p>
+    </div>
+    <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Details about another project, demonstrating my ability to solve real-world problems.</p>
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <form id="contact-form" action="{{ url_for('contact') }}" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Message"></textarea>
+    <form action="/submit_contact" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send</button>
     </form>
 </section>

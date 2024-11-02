@@ -1,3 +1,7 @@
 {
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "cSpell.words": [
+        "Abilash",
+        "Itsme"
+    ]
 }
