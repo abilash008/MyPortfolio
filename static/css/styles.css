@@ -57,15 +57,15 @@ section.show {
 }
 
 #about {
-    background: linear-gradient(135deg, #1d1d22, #441103);
-    color: #f0e9e9;
+    background: linear-gradient(135deg, #89f7fe, #194787);
+    color: #fff;
     border-radius: 15px;
     padding: 30px;
 }
 
 #contact {
-    background: linear-gradient(135deg, #727fd5, #fad0c4);
-    color: #dee7ec;
+    background: linear-gradient(135deg, #89f7fe, #194787);
+    color: #fff;
     border-radius: 15px;
     padding: 30px;
 }
@@ -78,8 +78,8 @@ section.show {
 }
 
 #projects {
-    background: linear-gradient(135deg, #575555, #ff7eb3);
-    color: #343131;
+    background: linear-gradient(135deg, #89f7fe, #194787);
+    color: #fff;
     border-radius: 15px;
     padding: 30px;
 }
@@ -117,7 +117,8 @@ p {
 
 /* Project Cards */
 .project-card {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
@@ -155,7 +156,10 @@ form button {
 
 form button:hover {
     background-color: #2a5298;
+    transform: scale(1.05);
 }
+
+
 
 /* Fade-in Animation */
 @keyframes fadeIn {
