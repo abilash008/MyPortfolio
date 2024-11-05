@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+ <!-- Photo and Social Media Icons Section -->
+ <section id="social-section">
+    <img src="{{ url_for('static', filename='images/me1.jpg') }}" alt="Abilash's Photo" class="profile-photo">
+    <div class="social-icons">
+        <a href="https://instagram.com/Abilash_3x11" target="_blank">
+            <img src="{{ url_for('static', filename='images/instagram.jpg') }}" alt="Instagram Icon">
+        </a>
+        <a href="https://facebook.com/abilash.king.77/" target="_blank">
+            <img src="{{ url_for('static', filename='images/facebook.jpg') }}" alt="Facebook Icon">
+        </a>
+        <a href="https://x.com/yourprofile" target="_blank">
+            <img src="{{ url_for('static', filename='images/x.png') }}" alt="X Icon">
+        </a>
+        <a href="https://wa.me/+918074146772" target="_blank">
+            <img src="{{ url_for('static', filename='images/whatsapp.png') }}" alt="WhatsApp Icon">
+        </a>
+    </div>
+</section>
+{% endblock %}

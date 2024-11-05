@@ -19,15 +19,26 @@
             <a href="{{ url_for('submissions') }}" class="admin-link"><b>Submissions</b></a>
         </nav>
     </header>
-    
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3 id="modal-title">Project Title</h3>
-            <p id="modal-description">Project description goes here...</p>
+
+    <!-- Photo and Social Media Icons Section -->
+    <section id="social-section">
+        <img src="{{ url_for('static', filename='images/me1.jpg') }}" alt="Abilash's Photo" class="profile-photo">
+        <div class="social-icons">
+            <a href="https://instagram.com/Abilash_3x11" target="_blank">
+                <img src="{{ url_for('static', filename='images/instagram.jpg') }}" alt="Instagram Icon">
+            </a>
+            <a href="https://facebook.com/abilash.king.77/" target="_blank">
+                <img src="{{ url_for('static', filename='images/facebook.jpg') }}" alt="Facebook Icon">
+            </a>
+            <a href="https://x.com/yourprofile" target="_blank">
+                <img src="{{ url_for('static', filename='images/x.png') }}" alt="X Icon">
+            </a>
+            <a href="https://wa.me/+918074146772" target="_blank">
+                <img src="{{ url_for('static', filename='images/whatsapp.png') }}" alt="WhatsApp Icon">
+            </a>
         </div>
-    </div>
-    
+    </section>
+
     {% block content %}{% endblock %}
 
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
