@@ -1,26 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section id="project-detail">
-    <h2>{{ project.title }}</h2>
-    <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}" class="project-image">
-    <p>{{ project.description }}</p>
-    
+
+<section id="project-detail" class="fade-in">
+    <h2>My Portfolio Project</h2>
+    <img src="{{ url_for('static', filename='images/portfolio_project.png') }}" alt="Portfolio Project" class="project-image">
+    <p>This project showcases my personal portfolio website, which I developed using HTML, CSS, JavaScript, and Python. The website is designed to be interactive, responsive, and has a rich, premium feel with gradient backgrounds and hover effects.</p>
+
     <h3>Technologies Used:</h3>
-    <ul>
-        {% for tech in project.technologies %}
-        <li>{{ tech }}</li>
-        {% endfor %}
+    <ul class="tech-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
     </ul>
 
     <h3>Project Links:</h3>
-    <p>
-        {% if project.github %}
-            <a href="{{ project.github }}" target="_blank">GitHub Repository</a>
-        {% endif %}
-        {% if project.demo %}
-            <a href="{{ project.demo }}" target="_blank">Live Demo</a>
-        {% endif %}
-    </p>
+    <div class="project-links">
+        <a href="https://github.com/abilash008/MyPortfolio/tree/master" target="_blank" class="project-link-btn">GitHub Repository</a>
+    </div>
 </section>
+
+<!-- Button for theme toggle -->
+<button id="theme-toggle" class="theme-toggle-btn">Toggle Theme</button>
+
+
+
 {% endblock %}

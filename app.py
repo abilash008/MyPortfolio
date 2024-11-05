@@ -84,6 +84,10 @@ def submissions():
     
     return render_template('submissions.html', submissions=submissions)
 
+@app.route('/portfolio')
+def portfolio():
+    return render_template('project.html')
+
 if __name__ == "__main__":
     init_db()
     app.run(debug=True)

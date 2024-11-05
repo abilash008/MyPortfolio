@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abilash's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='images/Lighter.jpg') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    
-
-
 </head>
 <body>
     <header>
@@ -21,7 +16,7 @@
             <a href="#projects"><b>Projects</b></a>
             <a href="#contact"><b>Contact</b></a>
             <button id="theme-toggle">Toggle Theme</button>
-            <a href="{{ url_for('submissions') }}" class="admin-link" ><b>Submissions</b></a>
+            <a href="{{ url_for('submissions') }}" class="admin-link"><b>Submissions</b></a>
         </nav>
     </header>
     
@@ -33,11 +28,9 @@
         </div>
     </div>
     
-
     {% block content %}{% endblock %}
 
-    
-
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
