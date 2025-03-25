@@ -130,6 +130,32 @@ p {
     transform: scale(1.05);
 }
 
+/* about Card */
+.about-card {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 20px;
+    text-align: justify;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+}
+ul {
+    position: relative;
+    list-style: none;
+}
+
+li::before {
+content: '▶';
+position: absolute;
+left: 0;
+}
+
 /* Contact Form */
 form {
     display: flex;
@@ -406,4 +432,15 @@ body.dark-theme .project-link-btn:hover {
 .social-icons a img:hover {
     transform: scale(1.1);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #111, #222); /* Subtle gradient */
+    color: #00ffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 15px rgba(0, 255, 255, 0.2);
+    font-size: 1rem;
 }

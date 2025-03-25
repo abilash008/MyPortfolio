@@ -20,9 +20,17 @@
         </nav>
     </header>
 
-    <!-- Photo and Social Media Icons Section -->
+    
+
+    {% block content %}{% endblock %}
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <footer>
+        <!-- Photo and Social Media Icons Section -->
     <section id="social-section">
-        <img src="{{ url_for('static', filename='images/me1.jpg') }}" alt="Abilash's Photo" class="profile-photo">
+        <!-- <img src="{{ url_for('static', filename='images/me1.jpg') }}" alt="Abilash's Photo" class="profile-photo"> -->
         <div class="social-icons">
             <a href="https://instagram.com/Abilash_3x11" target="_blank">
                 <img src="{{ url_for('static', filename='images/instagram.jpg') }}" alt="Instagram Icon">
@@ -38,10 +46,7 @@
             </a>
         </div>
     </section>
-
-    {% block content %}{% endblock %}
-
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <p>&copy; 2025 LuminoLearn. All rights reserved.</p>
+    </footer>
 </body>
 </html>
